@@ -5,17 +5,29 @@ using UnityEngine;
 public class VertebraMaker : MonoBehaviour
 {
     [SerializeField] private GameObject vertebraTemplate;
-    [SerializeField] private int numVertebrae;
+    [SerializeField] private GameObject addVertebraClickbox;
+    [SerializeField] private int startingNumVertebrae;
+    private int numVertebrae;
+
+    private Vector2 NextPosition => numVertebrae *
+                                    Vector2.right *
+                                    vertebraTemplate.GetComponent<SpriteRenderer>().sprite.bounds.size.x;
 
     // Start is called before the first frame update
     private void Start()
     {
-        Vector2 step = Vector2.right * vertebraTemplate.GetComponent<SpriteRenderer>().sprite.bounds.size.x;
-        Vector2 start = (Vector2) transform.position - step * numVertebrae / 2f;
-        for (int i = 0; i < numVertebrae; i++)
+        for (int i = 0; i < startingNumVertebrae; i++)
         {
-            GameObject vertebra = Instantiate(vertebraTemplate);
-            vertebra.transform.position = start + step * i;
+            AddVertebra();
         }
+    }
+
+    public void AddVertebra()
+    {
+        GameObject vertebra = Instantiate(vertebraTemplate, transform);
+        vertebra.transform.position = NextPosition;
+        numVertebrae++;
+
+        addVertebraClickbox.transform.position = NextPosition;
     }
 }
