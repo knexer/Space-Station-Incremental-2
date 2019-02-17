@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Station
+    uniqueID: 2673980227
+    locked: 0
+  - name: Slots
+    uniqueID: 3594688043
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
