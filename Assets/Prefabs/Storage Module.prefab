@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5037888527439773480
+--- !u!1 &3079117484122891914
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8332817567148570523}
-  - component: {fileID: 621397498484171519}
+  - component: {fileID: 3114793529635580751}
+  - component: {fileID: 2962561945606972283}
+  - component: {fileID: 5790122236192824602}
   m_Layer: 0
-  m_Name: Crew Module
+  m_Name: Storage Module
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8332817567148570523
+--- !u!4 &3114793529635580751
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5037888527439773480}
+  m_GameObject: {fileID: 3079117484122891914}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &621397498484171519
+--- !u!212 &2962561945606972283
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5037888527439773480}
+  m_GameObject: {fileID: 3079117484122891914}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -68,14 +69,46 @@ SpriteRenderer:
   m_SortingLayerID: 836664747
   m_SortingLayer: -2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 74570f55e43c4e042bf86e3bb0ca321a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08931ba481634bd428d37b226ecc9bb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.46, y: 4.19}
+  m_Size: {x: 4.44, y: 4.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5790122236192824602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3079117484122891914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: f3e2f10d82b72ec45afaa0e2f2283cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotPositions:
+  - {x: -1.74, y: 1.62}
+  - {x: -1.74, y: 0.54}
+  - {x: -1.74, y: -0.58}
+  - {x: -1.74, y: -1.73}
+  - {x: -0.57, y: 1.62}
+  - {x: -0.57, y: 0.54}
+  - {x: -0.57, y: -0.58}
+  - {x: -0.57, y: -1.73}
+  - {x: 0.55, y: 1.62}
+  - {x: 0.55, y: 0.54}
+  - {x: 0.55, y: -0.58}
+  - {x: 0.55, y: -1.73}
+  - {x: 1.76, y: 1.62}
+  - {x: 1.76, y: 0.54}
+  - {x: 1.76, y: -0.58}
+  - {x: 1.76, y: -1.73}
+  slotTemplate: {fileID: 1005203288411724078, guid: a4893af0eb4256c47afe229425253ffa,
+    type: 3}

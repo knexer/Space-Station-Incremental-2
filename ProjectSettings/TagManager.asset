@@ -41,8 +41,14 @@ TagManager:
   - name: Station
     uniqueID: 2673980227
     locked: 0
+  - name: Modules
+    uniqueID: 836664747
+    locked: 0
   - name: Slots
     uniqueID: 3594688043
+    locked: 0
+  - name: Resources
+    uniqueID: 2110457689
     locked: 0
   - name: Default
     uniqueID: 0
