@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8332817567148570523}
   - component: {fileID: 621397498484171519}
+  - component: {fileID: 2312606880926686500}
   m_Layer: 0
   m_Name: Crew Module
   m_TagString: Untagged
@@ -66,7 +67,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 836664747
-  m_SortingLayer: -2
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 74570f55e43c4e042bf86e3bb0ca321a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -79,3 +80,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2312606880926686500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5037888527439773480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: f3e2f10d82b72ec45afaa0e2f2283cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotPositions:
+  - {x: -2.68, y: 1.48}
+  - {x: -2.68, y: 0.58}
+  - {x: -2.68, y: -0.47}
+  - {x: -2.68, y: -1.48}
+  - {x: 2.68, y: 1.48}
+  - {x: 2.68, y: 0.58}
+  - {x: 2.68, y: -0.47}
+  - {x: 2.68, y: -1.48}
+  slotTemplate: {fileID: 1005203288411724078, guid: a4893af0eb4256c47afe229425253ffa,
+    type: 3}
