@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3114793529635580751}
   - component: {fileID: 2962561945606972283}
   - component: {fileID: 5790122236192824602}
+  - component: {fileID: 4132256437395148866}
   m_Layer: 0
   m_Name: Storage Module
   m_TagString: Untagged
@@ -67,7 +68,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 836664747
-  m_SortingLayer: -2
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 08931ba481634bd428d37b226ecc9bb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -112,3 +113,18 @@ MonoBehaviour:
   - {x: 1.76, y: -1.73}
   slotTemplate: {fileID: 1005203288411724078, guid: a4893af0eb4256c47afe229425253ffa,
     type: 3}
+  Slots: []
+--- !u!114 &4132256437395148866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3079117484122891914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: d84594798d7f92144a76f9734983cd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StorageSlots: {fileID: 5790122236192824602}
