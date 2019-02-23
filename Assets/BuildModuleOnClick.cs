@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class BuildModuleOnClick : MonoBehaviour
 {
-    [SerializeField] private GameObject module;
+    private OpenModal modalRegistrar;
+
+    private void Start()
+    {
+        modalRegistrar = FindObjectOfType<OpenModal>();
+    }
 
     private void OnMouseDown()
     {
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<SpriteRenderer>().enabled = false;
-        // TODO spawn a module picker GUI or something once there are multiple modules
-        Instantiate(module, transform);
+        modalRegistrar.listModules.Open(transform);
     }
 }
