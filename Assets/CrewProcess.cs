@@ -28,6 +28,7 @@ public class CrewProcess : MonoBehaviour, IProcess
         {
             Destroy(inputSlot.Occupant.gameObject);
             outputSlot.Occupant = Instantiate(outputTemplate, outputSlot.transform);
+            nextProduceTime = Time.time + produceTime;
         }
     }
 
