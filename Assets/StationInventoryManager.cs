@@ -30,7 +30,23 @@ public class StationInventoryManager : MonoBehaviour
             MoveResource(pushingSlot, availableStorage[usedStorage]);
         }
 
-        // TODO 2. Pull inputs from storage
+        // 2. Pull inputs from storage
+        ILookup<ResourceType, Slot> pullingSlots = modules
+            .Select(module => module.PullingSlots)
+            .SelectMany(lookup => lookup)
+            .SelectMany(group => group.Select(value => new {group.Key, value}))
+            .ToLookup(element => element.Key, element => element.value);
+        IEnumerable<Slot> occupiedStorage = modules.SelectMany(module => module.OccupiedStorage);
+        foreach (Slot sourceSlot in occupiedStorage)
+        {
+            if (!pullingSlots.Contains(sourceSlot.Occupant.Type)) continue;
+            Slot destinationSlot = pullingSlots[sourceSlot.Occupant.Type]
+                .FirstOrDefault(candidate => candidate.Occupant == null);
+            if (destinationSlot != null)
+            {
+                MoveResource(sourceSlot, destinationSlot);
+            }
+        }
         // TODO 3. Pull inputs from outputs (this one may be optional as it's implicit in 2 & 3 if there's empty storage space on board)
     }
 

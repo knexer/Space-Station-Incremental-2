@@ -14,6 +14,12 @@ public class Module : MonoBehaviour
 
     public IEnumerable<Slot> AvailableStorage => StorageSlots ? StorageSlots.Slots.Where(slot => slot.Occupant == null) : new List<Slot>();
 
+    public ILookup<ResourceType, Slot> PullingSlots =>
+        processes.ToLookup(process => process.RequiredResource(), process => process.InputSlot);
+
+    public IEnumerable<Slot> OccupiedStorage =>
+        StorageSlots ? StorageSlots.Slots.Where(slot => slot.Occupant != null) : new List<Slot>();
+
     // Start is called before the first frame update
     void Start()
     {
