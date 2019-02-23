@@ -28,6 +28,7 @@ public class StationInventoryManager : MonoBehaviour
                 break;
             }
             MoveResource(pushingSlot, availableStorage[usedStorage]);
+            usedStorage++;
         }
 
         // 2. Pull inputs from storage
