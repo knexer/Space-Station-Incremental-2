@@ -22,10 +22,13 @@ public class ListModules : MonoBehaviour
         }
     }
 
-    public void Open(Transform destination)
+    public bool Open(Transform destination)
     {
+        if (this.isActiveAndEnabled) return false;
+
         this.destination = destination;
         gameObject.SetActive(true);
+        return true;
     }
 
     private void OnButtonClicked(Module moduleType)

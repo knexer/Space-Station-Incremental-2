@@ -13,8 +13,9 @@ public class BuildModuleOnClick : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (!modalRegistrar.listModules.Open(transform)) return;
+
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<SpriteRenderer>().enabled = false;
-        modalRegistrar.listModules.Open(transform);
     }
 }
