@@ -8,6 +8,7 @@ public class ListModules : MonoBehaviour
     [SerializeField] private List<Module> moduleTypes;
     [SerializeField] private GameObject moduleViewTemplate;
     [SerializeField] private RectTransform moduleViewContainer;
+    [SerializeField] private GameObject clickBlocker;
 
     private Transform destination;
 
@@ -28,6 +29,7 @@ public class ListModules : MonoBehaviour
 
         this.destination = destination;
         gameObject.SetActive(true);
+        clickBlocker.SetActive(true);
         return true;
     }
 
@@ -35,6 +37,7 @@ public class ListModules : MonoBehaviour
     {
         Instantiate(moduleType, destination);
         gameObject.SetActive(false);
+        clickBlocker.SetActive(false);
     }
 
     // Update is called once per frame

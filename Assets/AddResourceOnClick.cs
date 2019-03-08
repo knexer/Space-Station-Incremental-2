@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Slot))]
-public class AddResourceOnClick : MonoBehaviour
+public class AddResourceOnClick : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] private Resource resourceTemplate;
     private Slot slot;
@@ -13,7 +14,7 @@ public class AddResourceOnClick : MonoBehaviour
         slot = GetComponent<Slot>();
     }
 
-    private void OnMouseDown()
+    public void OnPointerDown(PointerEventData data)
     {
         if (slot.Occupant == null)
         {

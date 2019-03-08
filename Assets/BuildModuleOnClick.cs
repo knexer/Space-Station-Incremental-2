@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class BuildModuleOnClick : MonoBehaviour
+public class BuildModuleOnClick : MonoBehaviour, IPointerDownHandler
 {
     private OpenModal modalRegistrar;
 
@@ -11,7 +12,7 @@ public class BuildModuleOnClick : MonoBehaviour
         modalRegistrar = FindObjectOfType<OpenModal>();
     }
 
-    private void OnMouseDown()
+    public void OnPointerDown(PointerEventData data)
     {
         if (!modalRegistrar.listModules.Open(transform)) return;
 

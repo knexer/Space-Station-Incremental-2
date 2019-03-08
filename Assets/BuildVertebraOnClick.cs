@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class BuildVertebraOnClick : MonoBehaviour
+public class BuildVertebraOnClick : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] private VertebraMaker vertebraMaker;
 
-    private void OnMouseDown()
+    public void OnPointerDown(PointerEventData data)
     {
         vertebraMaker.AddVertebra();
     }
