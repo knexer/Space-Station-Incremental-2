@@ -9,6 +9,22 @@ public class StationInventoryManager : MonoBehaviour
 
     public void Register(Module module) => modules.Add(module);
 
+    public IEnumerable<Slot> Storage => modules.SelectMany(
+        module => module.AvailableStorage.Concat(module.OccupiedStorage));
+
+    private Dictionary<ResourceType, int> minimums = new Dictionary<ResourceType, int>();
+    private Dictionary<ResourceType, int> maximums = new Dictionary<ResourceType, int>();
+
+    public void SetMinimum(ResourceType resource, int minimum)
+    {
+        minimums[resource] = minimum;
+    }
+
+    public void SetMaximum(ResourceType resource, int maximum)
+    {
+        maximums[resource] = maximum;
+    }
+
     // Update is called once per frame
     void Update()
     {
